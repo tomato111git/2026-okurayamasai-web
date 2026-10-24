@@ -40,10 +40,9 @@ body.menu-open {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
+  height: 100svh;
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
@@ -64,30 +63,35 @@ body.menu-open {
 }
 .background-decoration .decor-item.item-1 {
   top: 20vh;
+  top: 20svh;
   left: 5vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(-24deg);
 }
 .background-decoration .decor-item.item-2 {
   top: 40vh;
+  top: 40svh;
   right: 22vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(20deg);
 }
 .background-decoration .decor-item.item-3 {
-  bottom: 10vh;
+  top: 75vh;
+  top: 75svh;
   right: 4.5vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(-16deg);
 }
 .background-decoration .decor-item.item-4 {
   top: 14vh;
+  top: 14svh;
   right: 8vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(34deg);
 }
 .background-decoration .decor-item.item-5 {
-  bottom: 10vh;
+  top: 75vh;
+  top: 75svh;
   left: 18vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(-20deg);
@@ -99,30 +103,35 @@ body.menu-open {
   }
   .background-decoration .decor-item.item-1 {
     top: 12vh;
+    top: 12svh;
     left: 2%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(-24deg);
   }
   .background-decoration .decor-item.item-2 {
     top: 50vh;
+    top: 50svh;
     left: 2%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(20deg);
   }
   .background-decoration .decor-item.item-3 {
     top: 72vh;
+    top: 72svh;
     right: 2%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(-16deg);
   }
   .background-decoration .decor-item.item-4 {
     top: 26vh;
+    top: 26svh;
     right: 2%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(34deg);
   }
   .background-decoration .decor-item.item-5 {
-    bottom: 6vh;
+    top: 76vh;
+    top: 76svh;
     left: 3%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(-20deg);
@@ -317,23 +326,6 @@ dd {
     padding-top: 70px;
   }
 }
-.main #subtitle {
-  font-size: clamp(24px, 3.2vw, 40px);
-  position: relative;
-  margin: clamp(32px, 4vw, 60px) 0;
-}
-.main #subtitle::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  max-width: 300px;
-  height: clamp(3px, 0.4vw, 4.5px);
-  background-color: #c4b13d;
-  border-radius: 2px;
-}
 .main .top {
   min-height: 90vh;
   width: 100%;
@@ -404,12 +396,6 @@ dd {
     bottom: 25px;
   }
 }
-.main .news {
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: 1px solid rgb(220, 211, 182);
-  padding-bottom: 20px;
-}
 .main .news .news-title {
   margin: 16px 0;
   font-size: clamp(22px, 3.2vw, 40px);
@@ -440,12 +426,6 @@ dd {
 .main .news .news-content dl dd {
   margin: 0;
   font-size: clamp(16px, 1.8vw, 18px);
-}
-.main .about {
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: 1px solid rgb(220, 211, 182);
-  padding-bottom: 40px;
 }
 .main .about .about-title {
   margin: 32px 0;
@@ -510,11 +490,6 @@ dd {
     width: 35%;
   }
 }
-.main .projects {
-  width: 90%;
-  margin: 0 auto;
-  border-bottom: 1px solid rgb(220, 211, 182);
-}
 .main .projects .projects-title {
   margin: 32px 0;
   font-size: clamp(22px, 3.2vw, 40px);
@@ -559,11 +534,6 @@ dd {
     gap: 16px;
   }
 }
-.main .talk-show {
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 60px;
-}
 .main .talk-show .talk-show-title {
   margin: 32px 0;
   font-size: clamp(22px, 3.2vw, 40px);
@@ -591,30 +561,6 @@ dd {
 .main .talk-show .talk-show-content .text {
   width: 35%;
   position: relative;
-}
-.main .talk-show .talk-show-content .text #talk-show-title {
-  font-size: clamp(18px, 2.5vw, 24px);
-  font-weight: bold;
-  margin: 20px 0 12px 0;
-  display: inline-block;
-  position: relative;
-}
-.main .talk-show .talk-show-content .text #talk-show-title::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  max-width: 300px;
-  height: 3px;
-  background-color: #c4b13d;
-  border-radius: 2px;
-}
-.main .talk-show .talk-show-content .text #talk-show-contents {
-  font-size: clamp(18px, 3vw, 24px);
-  line-height: 1.8;
-  margin: 0 0 32px 0;
 }
 .main .talk-show .talk-show-content .text .talk-show-notes {
   position: absolute;

@@ -40,10 +40,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
     height: 100%;
+    height: 100svh;
     overflow: hidden;
     pointer-events: none;
     z-index: 0;
@@ -66,6 +65,7 @@ body {
         // item-1: カプセル薬
         &.item-1 {
             top: 20vh;
+            top: 20svh;
             left: 5vw;
             width: $width_pcbase;
             transform: rotate(-24deg);
@@ -74,6 +74,7 @@ body {
         // item-2: アンプル
         &.item-2 {
             top: 40vh;
+            top: 40svh;
             right: 22vw;
             width: $width_pcbase;
             transform: rotate(20deg);
@@ -81,7 +82,8 @@ body {
 
         // item-3: 聴診器
         &.item-3 {
-            bottom: 10vh;
+            top: 75vh;
+            top: 75svh;
             right: 4.5vw;
             width: $width_pcbase;
             transform: rotate(-16deg);
@@ -90,6 +92,7 @@ body {
         // item-4: 絆創膏
         &.item-4 {
             top: 14vh;
+            top: 14svh;
             right: 8vw;
             width: $width_pcbase;
             transform: rotate(34deg);
@@ -97,7 +100,8 @@ body {
 
         // item-5: 注射器
         &.item-5 {
-            bottom: 10vh;
+            top: 75vh;
+            top: 75svh;
             left: 18vw;
             width: $width_pcbase;
             transform: rotate(-20deg);
@@ -115,6 +119,7 @@ body {
             // item-1: カプセル薬
             &.item-1 {
                 top: 12vh;
+                top: 12svh;
                 left: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-24deg);
@@ -123,6 +128,7 @@ body {
             // item-2: アンプル
             &.item-2 {
                 top: 50vh;
+                top: 50svh;
                 left: 2%;
                 width: $width_mobilebase;
                 transform: rotate(20deg);
@@ -131,6 +137,7 @@ body {
             // item-3: 聴診器
             &.item-3 {
                 top: 72vh;
+                top: 72svh;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-16deg);
@@ -139,6 +146,7 @@ body {
             // item-4: 絆創膏
             &.item-4 {
                 top: 26vh;
+                top: 26svh;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(34deg);
@@ -146,7 +154,8 @@ body {
 
             // item-5: 注射器
             &.item-5 {
-                bottom: 6vh;
+                top: 76vh;
+                top: 76svh;
                 left: 3%;
                 width: $width_mobilebase;
                 transform: rotate(-20deg);
@@ -378,24 +387,6 @@ $underline-color: #c4b13d;
         padding-top: 70px;
     }
 
-    #subtitle {
-        font-size: clamp(24px, 3.2vw, 40px);
-        position: relative;
-        margin: clamp(32px, 4vw, 60px) 0;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 95%;
-            max-width: 300px;
-            height: clamp(3px, 0.4vw, 4.5px);
-            background-color: $underline-color;
-            border-radius: 2px;
-        }
-    }
 
     .top {
         min-height: 90vh;
@@ -481,11 +472,6 @@ $underline-color: #c4b13d;
     }
 
     .news {
-        width: 90%;
-        margin: 0 auto;
-        border-bottom: 1px solid rgb(220, 211, 182);
-        padding-bottom: 20px;
-
         .news-title {
             margin: 16px 0;
             font-size: clamp(22px, 3.2vw, 40px);
@@ -526,11 +512,6 @@ $underline-color: #c4b13d;
     }
 
     .about {
-        width: 90%;
-        margin: 0 auto;
-        border-bottom: 1px solid rgb(220, 211, 182);
-        padding-bottom: 40px;
-
         .about-title {
             margin: 32px 0;
             font-size: clamp(22px, 3.2vw, 40px);
@@ -606,9 +587,6 @@ $underline-color: #c4b13d;
     }
 
     .projects {
-        width: 90%;
-        margin: 0 auto;
-        border-bottom: 1px solid rgb(220, 211, 182);
 
         .projects-title {
             margin: 32px 0;
@@ -664,9 +642,6 @@ $underline-color: #c4b13d;
     }
 
     .talk-show {
-        width: 90%;
-        margin: 0 auto;
-        padding-bottom: 60px;
 
         .talk-show-title {
             margin: 32px 0;
@@ -698,34 +673,6 @@ $underline-color: #c4b13d;
             .text {
                 width: 35%;
                 position: relative;
-
-                #talk-show-title {
-                    font-size: clamp(18px, 2.5vw, 24px);
-                    font-weight: bold;
-                    margin: 20px 0 12px 0;
-                    display: inline-block;
-                    position: relative;
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        bottom: -6px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 95%;
-                        max-width: 300px;
-                        height: 3px;
-                        background-color: $underline-color;
-                        border-radius: 2px;
-                    }
-                }
-
-                #talk-show-contents {
-                    font-size: clamp(18px, 3vw, 24px);
-                    line-height: 1.8;
-                    margin: 0 0 32px 0;
-
-                }
 
                 .talk-show-notes {
                     position: absolute;
