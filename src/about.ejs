@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-decoration" aria-hidden="true">
+        <div class="decor-item item-1"><img src="./images/background/capsule-medicine_orange.png" alt=""></div>
+        <div class="decor-item item-2"><img src="./images/background/medicine_ampoule.png" alt=""></div>
+        <div class="decor-item item-3"><img src="./images/background/stethoscope.png" alt=""></div>
+        <div class="decor-item item-4"><img src="./images/background/sticking-plaster.png" alt=""></div>
+        <div class="decor-item item-5"><img src="./images/background/syringe.png" alt=""></div>
+    </div>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="discription" id="main-inner">
+            <h2 class="about-title" id="subtitle">大倉山祭とは</h2>
+            <div class="about-content">
+                <div class="img">
+                    <img src="./images/about.jpg" alt="">
+                </div>
+                <div class="text">
+                    <p>大倉山祭は神戸大学 医学部 楠キャンパスで<br>
+                        毎年秋に開催される学園祭です。<br>
+                        今年は11月1日(日)に開催します！<br>
+                        模擬店、ステージ企画、お笑いライブなど、<br>
+                        盛りだくさんの内容でお届けします！</p>
+                </div>
+            </div>
+        </div>
+        <div class="time-place" id="main-inner">
+            <h2 class="title" id="subtitle">開催日時・場所</h2>
+            <div class="content">
+                <div class="info">
+                    <div class="time">
+                        <p class="time-title" id="sub-subtitle">日時</p>
+                        <p class="time-content" id="sub-subtext">2026年11月1日(日) 9:00〜18:00</p>
+                    </div>
+                    <div class="place">
+                        <p class="place-title" id="sub-subtitle">場所</p>
+                        <p class="place-content" id="sub-subtext">大倉山公園</p>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.4246391239021!2d135.17252148668354!3d34.684471587239194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008fa0d791a085%3A0x43893fe23740b8c0!2z5rC044Go44Gf44KP44KA44KM44KL5a2Q5L6b6YGU!5e1!3m2!1sja!2sjp!4v1792828919965!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="manager-greeting" id="main-inner">
+            <h2 class="title" id="subtitle">学部長挨拶</h2>
+            <div class="content">
+                <div class="img">
+                    <img src="./images/manager.jpeg" alt="">
+                    <p class="name">神戸大学医学部長 勝二 郁夫先生</p>
+                </div>
+                <div class="text">
+                    <p>大倉山祭の開催にあたり、一言ご挨拶を申し上げます。本年も大倉山祭の季節がやってまいりました。大倉山祭は、神戸大学医学部生にとっての一大イベントです。医学の勉学や実習に追われる日々から束の間離れ、大学生らしい学園祭を開催し、大学の仲間や地域の皆さまと共に楽しい時間を共有する、青春の貴重な機会となっています。
+                    </p>
+                    <p>大倉山祭は、企画の立案から連営、当日の進行に至るまですべてを学生自身の手で担う、学生主体のイベントです。各クラブによる模擬店やステージ企画、普楽やダンスなどのパフォーマンスを通して、学生はもとより、近隣の皆さまにも楽しんでいただける催しとなることを心より期待しております。
+                    </p>
+                    <p>本年度のテーマは「紡」です。学生一人ひとりのつながり、先輩から受け継いできた大倉山祭の伝統、そして地域の皆さまとの交流を一本一本の糸に見立て、それらを「紡ぐ」ことで一つの大きな大倉山祭をつくり上げ、さらに次の世代へとつないでいきたいという思いが込められています。
+                    </p>
+                    <p>大倉山祭は、学生にとってかけがえのない学びの場でもあります。仲間と知恵を出し合い、試行錯誤を重ねながら一つのものをつくり上げる経験は、貴任感や協働の力を育み、やがて患者さんや地域社会に寄り添う医療人としての姿勢にもつながっていくことでしょう。勉学や実習の合間を縫って準備に打ち込んできた学生たちの努力に、心から敬意を表します。
+                    </p>
+                    <p>開催にあたり、温かいご支援とご協力をいただきました地域の皆さま、関係者の皆さまに、厚く御礼申し上げます。大倉山祭を通じて地域の皆さまとの交流を深め、共に学び、共に楽しむことは、医学生の成長にとって大きな糧となります。大倉山祭が学生一人ひとりにとって素晴らしい思い出となり、そして、これからの学びと成長を支える力となることを心より祈念いたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chief-greeting" id="main-inner">
+            <h2 class="title" id="subtitle">委員長挨拶</h2>
+            <div class="content">
+                <div class="img">
+                    <img src="./images/chief.png" alt="">
+                    <p class="name">大倉山祭実行委員長 田村 嘉規</p>
+                </div>
+                <div class="text">
+                    <p>2026年度大倉山祭の開催にあたり、実行委員長としてご挨拶申し上げます。本年度、大倉山祭実行委員長を務めております、医学科3回生の田村嘉規です。</p>
+                    <p>大倉山祭は、神戸大学医学部の学生が主体となって企画・連営する学園祭です。日頃はそれぞれの勉学や実習、課外活動に励む学生たちが、学年や所属の垣根を越えて協力し、一つの行事を作り上げる貴重な機会でもあります。また、学生同士の交流だけでなく、地域の皆様や日頃からお世話になっている方々とのつながりを深められることも、大倉山祭の大きな魅力だと考えています。
+                    </p>
+                    <p>今年度の大倉山祭のテーマは「紡（つむぐ）」です。この一文字には、「結」「努力」「交流」という三つの思いを込めています。今年度の大倉山祭のテーマは「紡（つむぐ）」です。この一文字には、「結」「努力」「交流」という三つの思いを込めています。
+                    </p>
+                    <p>一つ目の「団結」は、学生一人ひとりの力を合わせ、一つの大きな行事を作り上げることです。準備を進める中では、意見がぶつかったり、思い通りに物事が進まなかったりすることもありました。しかし、そのたびに互いに知恵を出し合い、支え合うことで、一人では成し遂げられないことも実現できるのだと実感しました。
+                    </p>
+                    <p>二つ目の「努力」は、今日という一日のために積み重ねてきた準備や挑戦です。各企画の担当者をはじめ、多くの学生が授業や実習の合間を縫いながら準備に取り組んできました。その一つひとつの努力が実を結び、ご来場の皆様の笑顔につながることを心から願っています。
+                    </p>
+                    <p>そして三つ目の「交流」は、この大倉山祭を通じて生まれる新たな出会いやつながりです。学生同士はもちろん、地域の皆様やご来場いただいた方々との交流を通して、普段の大学生活では得られない経験や発見が生まれることを期待しています。
+                    </p>
+                    <p>また、大倉山祭は決して私たち学生の力だけで開催できるものではありません。特に今年度は、準備を進める中で様々な課題に直面しましたが、そのたびに多くの方々から温かいご支援とご協力をいただきました。皆様のお力添えがなければ、今年の大倉山祭を開催することはできなかったと強く感じております。開催にあたりご尽力いただいた先生方、大学関係者の皆様、協費・ご寄付をいただいた皆様、地域の皆様、そして共に準備を進めてきた実行委員をはじめとする学生の皆さんに、この場をお借りして心より礼申し上げます。
+                    </p>
+                    <p>これまで先輩方が築き上げてこられた大倉山祭の歴史と伝統を大切にしながら、今年ならではの新たな魅力を加え、次の世代へとつないでいきたいと考えています。</p>
+                    <p>本日の大倉山祭が、ご来場いただいた皆様にとって笑顔あふれる一日となり、ここで生まれた出会いや思い出が、これからも長く心に残るものとなれば幸いです。</p>
+                    <p>最後になりますが、大倉山祭に関わってくださったすべての皆様に、改めて深く感謝申し上げます。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
