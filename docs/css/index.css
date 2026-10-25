@@ -373,16 +373,16 @@ dd {
 .main .top .time {
   position: absolute;
   right: 5%;
-  text-align: right;
+  text-align: center;
   white-space: nowrap;
-  font-size: clamp(13px, 1.6vw, 18px);
+  font-size: clamp(24px, 4vw, 32px);
 }
 .main .top .date {
-  bottom: 60px;
+  bottom: 80px;
   font-weight: bold;
 }
 .main .top .time {
-  bottom: 35px;
+  bottom: 30px;
   font-weight: bold;
 }
 @media (max-width: 768px) {
@@ -390,10 +390,10 @@ dd {
     min-height: min(600px, 85vh);
   }
   .main .top .date {
-    bottom: 45px;
+    bottom: 50px;
   }
   .main .top .time {
-    bottom: 25px;
+    bottom: 20px;
   }
 }
 .main .news .news-title {

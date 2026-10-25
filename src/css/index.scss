@@ -439,18 +439,18 @@ $underline-color: #c4b13d;
         .time {
             position: absolute;
             right: 5%;
-            text-align: right;
+            text-align: center;
             white-space: nowrap;
-            font-size: clamp(13px, 1.6vw, 18px);
+            font-size: clamp(24px, 4vw, 32px);
         }
 
         .date {
-            bottom: 60px;
+            bottom: 80px;
             font-weight: bold;
         }
 
         .time {
-            bottom: 35px;
+            bottom: 30px;
             font-weight: bold;
         }
     }
@@ -462,11 +462,11 @@ $underline-color: #c4b13d;
             min-height: min(600px, 85vh);
 
             .date {
-                bottom: 45px;
+                bottom: 50px;
             }
 
             .time {
-                bottom: 25px;
+                bottom: 20px;
             }
         }
     }
