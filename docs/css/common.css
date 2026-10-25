@@ -139,8 +139,8 @@ main {
   transform: rotate(20deg);
 }
 .background-decoration .decor-item.item-3 {
-  top: 75vh;
-  top: 75svh;
+  bottom: 10vh;
+  bottom: 10svh;
   right: 4.5vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(-16deg);
@@ -153,11 +153,18 @@ main {
   transform: rotate(34deg);
 }
 .background-decoration .decor-item.item-5 {
-  top: 75vh;
-  top: 75svh;
+  bottom: 10vh;
+  bottom: 10svh;
   left: 18vw;
   width: clamp(120px, 22vw, 240px);
   transform: rotate(-20deg);
+}
+.background-decoration .decor-item.item-6 {
+  top: 28vh;
+  top: 28svh;
+  left: 36vw;
+  width: clamp(120px, 22vw, 240px);
+  transform: rotate(-10deg);
 }
 
 @media (max-width: 768px) {
@@ -179,8 +186,8 @@ main {
     transform: rotate(20deg);
   }
   .background-decoration .decor-item.item-3 {
-    top: 72vh;
-    top: 72svh;
+    bottom: 3vh;
+    bottom: 3svh;
     right: 2%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(-16deg);
@@ -193,11 +200,18 @@ main {
     transform: rotate(34deg);
   }
   .background-decoration .decor-item.item-5 {
-    top: 76vh;
-    top: 76svh;
+    bottom: 5vh;
+    bottom: 5svh;
     left: 3%;
     width: clamp(120px, 20vw, 240px);
     transform: rotate(-20deg);
+  }
+  .background-decoration .decor-item.item-6 {
+    top: 36vh;
+    top: 36svh;
+    right: 2%;
+    width: clamp(120px, 20vw, 240px);
+    transform: rotate(-10deg);
   }
 }
 section {

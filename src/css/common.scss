@@ -149,8 +149,8 @@ main {
 
         // item-3: 聴診器
         &.item-3 {
-            top: 75vh;
-            top: 75svh;
+            bottom: 10vh;
+            bottom: 10svh;
             right: 4.5vw;
             width: $width_pcbase;
             transform: rotate(-16deg);
@@ -167,11 +167,20 @@ main {
 
         // item-5: 注射器
         &.item-5 {
-            top: 75vh;
-            top: 75svh;
+            bottom: 10vh;
+            bottom: 10svh;
             left: 18vw;
             width: $width_pcbase;
             transform: rotate(-20deg);
+        }
+
+        // item-6: 救急箱
+        &.item-6 {
+            top: 28vh;
+            top: 28svh;
+            left: 36vw;
+            width: $width_pcbase;
+            transform: rotate(-10deg);
         }
     }
 }
@@ -203,8 +212,8 @@ main {
 
             // item-3: 聴診器
             &.item-3 {
-                top: 72vh;
-                top: 72svh;
+                bottom: 3vh;
+                bottom: 3svh;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-16deg);
@@ -221,11 +230,20 @@ main {
 
             // item-5: 注射器
             &.item-5 {
-                top: 76vh;
-                top: 76svh;
+                bottom: 5vh;
+                bottom: 5svh;
                 left: 3%;
                 width: $width_mobilebase;
                 transform: rotate(-20deg);
+            }
+
+            // item-6: 救急箱
+            &.item-6 {
+                top: 36vh;
+                top: 36svh;
+                right: 2%;
+                width: $width_mobilebase;
+                transform: rotate(-10deg);
             }
         }
     }
