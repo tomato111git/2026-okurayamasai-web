@@ -1,0 +1,4 @@
+main .projects .projects-content img {
+  width: clamp(360px, 85vw, 1080px);
+  margin: 0 auto;
+}/*# sourceMappingURL=projects.css.map */

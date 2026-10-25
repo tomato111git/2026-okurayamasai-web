@@ -1,0 +1,54 @@
+<%const faqList = [
+    {
+      q: '大倉山祭の開催場所と日程を教えてください。',
+      a: '大倉山祭2026は11月1日(土)に大倉山祭の噴水広場で開催します。開催時間は9:00~19:00です。'
+    },
+    // {
+    //   q: 'JavaScriptは必要ですか？',
+    //   a: 'アコーディオンの開閉アニメーションを付ける場合は使用しますが、HTMLだけでも実装可能です。'
+    // },
+    // {
+    //   q: 'どんなページに使えますか？',
+    //   a: 'トップページやアクセス案内など、あらゆるページに組み込めます。'
+    // }
+  ];
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('components/_head', {
+    title: 'よくあるご質問',
+    pageCss: 'faq.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="faq-content" id="main-inner">
+            <h2 class="faq-title" id="subtitle">よくあるご質問</h2>
+            <div class="faq-accordion_item">
+                <% faqList.forEach(item => { %>
+                <button class="faq-accordion_question" type="button">
+                    <span class="faq-accordion_question-text"><%= item.q %></span>
+                </button>
+                <div class="faq-accordion_answer"><%= item.a %></div>
+                <% }); %>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/faq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('components/_head', {
+    title: '企画一覧',
+    pageCss: 'projects.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="projects" id="main-inner">
+            <h2 class="projects-title" id="subtitle">企画一覧</h2>
+            <div class="projects-content">
+                <img src="./images/shopmap.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

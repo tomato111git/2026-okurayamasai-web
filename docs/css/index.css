@@ -415,17 +415,47 @@ dd {
 .main .news .news-content dl {
   display: flex;
   flex-direction: column;
-  font-size: clamp(14px, 1.6vw, 16px);
   line-height: 1.8;
-  margin: 16px 0;
+  margin: 0 0 10px 0;
+}
+.main .news .news-content dl:last-of-type {
+  margin-bottom: 0;
 }
 .main .news .news-content dl dt {
   color: #4e4e4e;
-  font-size: clamp(14px, 1.6vw, 16px);
+  font-size: clamp(12px, 1.6vw, 18px);
+  margin-bottom: 2px;
 }
 .main .news .news-content dl dd {
   margin: 0;
-  font-size: clamp(16px, 1.8vw, 18px);
+  font-size: clamp(14px, 1.8vw, 20px);
+  color: #383e45;
+}
+.main .news .news-content dl dd a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+.main .news .news-content dl dd a:hover {
+  opacity: 0.7;
+}
+.main .news .news-content .news-more {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+.main .news .news-content .news-more a {
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #383e45;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.main .news .news-content .news-more a:hover {
+  opacity: 0.7;
+  transform: translateX(4px);
 }
 .main .about .about-title {
   margin: 32px 0;

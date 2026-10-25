@@ -2,22 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <%- include('components/_head', {
+    title: '大倉山祭について',
+    pageCss: 'about.css'
+  }) %>
 </head>
 
 <body>
-    <div class="background-decoration" aria-hidden="true">
-        <div class="decor-item item-1"><img src="./images/background/capsule-medicine_orange.png" alt=""></div>
-        <div class="decor-item item-2"><img src="./images/background/medicine_ampoule.png" alt=""></div>
-        <div class="decor-item item-3"><img src="./images/background/stethoscope.png" alt=""></div>
-        <div class="decor-item item-4"><img src="./images/background/sticking-plaster.png" alt=""></div>
-        <div class="decor-item item-5"><img src="./images/background/syringe.png" alt=""></div>
-    </div>
+    <%- include('components/_background') %>
 
     <%- include('components/_header') %>
 
@@ -48,7 +40,7 @@
                     </div>
                     <div class="place">
                         <p class="place-title" id="sub-subtitle">場所</p>
-                        <p class="place-content" id="sub-subtext">大倉山公園</p>
+                        <p class="place-content" id="sub-subtext">大倉山公園 噴水広場</p>
                     </div>
                 </div>
                 <div class="map">
@@ -63,7 +55,7 @@
             <h2 class="title" id="subtitle">学部長挨拶</h2>
             <div class="content">
                 <div class="img">
-                    <img src="./images/manager.jpeg" alt="">
+                    <img src="./images/manager.png" alt="">
                     <p class="name">神戸大学医学部長 勝二 郁夫先生</p>
                 </div>
                 <div class="text">

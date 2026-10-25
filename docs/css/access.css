@@ -1,0 +1,110 @@
+@charset "UTF-8";
+main .access-section .access-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: stretch;
+}
+main .access-section .access-container .access-info .info-list {
+  margin: 0 0 28px 0;
+  padding: 0;
+}
+main .access-section .access-container .access-info .info-list .info-row {
+  display: flex;
+  align-items: baseline;
+  padding: clamp(12px, 1.4vw, 16px) 0;
+  border-bottom: 1px solid #ebe5d8;
+}
+main .access-section .access-container .access-info .info-list .info-row dt {
+  width: 76px;
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #383e45;
+  font-size: clamp(15px, 1.2vw, 17px);
+}
+main .access-section .access-container .access-info .info-list .info-row dd {
+  margin: 0;
+  flex-grow: 1;
+  color: #4a515a;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.7;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-title {
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+  color: #383e45;
+  margin: 0 0 16px 0;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block {
+  margin-bottom: 20px;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block:last-child {
+  margin-bottom: 0;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-subtitle {
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 700;
+  color: #ca2a2a;
+  margin: 0 0 8px 0;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-list li {
+  position: relative;
+  padding-left: 1.2em;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.8;
+  color: #4a515a;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #383e45;
+  font-weight: 700;
+}
+main .access-section .access-container .access-map {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background-color: #f0ede6;
+  display: flex;
+}
+main .access-section .access-container .access-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  border: 0;
+  display: block;
+}
+@media (max-width: 768px) {
+  main .access-section .access-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  main .access-section .access-container .access-map {
+    height: auto;
+    min-height: unset;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+  }
+  main .access-section .access-container .access-map iframe {
+    height: 100%;
+    min-height: unset;
+  }
+}
+@media (max-width: 480px) {
+  main .access-section .access-container .access-info .info-list .info-row dt {
+    width: 64px;
+  }
+  main .access-section .access-container .access-map {
+    aspect-ratio: 1/1;
+  }
+}/*# sourceMappingURL=access.css.map */

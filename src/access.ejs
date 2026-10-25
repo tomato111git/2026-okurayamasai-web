@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <%- include('components/_head', {
+    title: 'アクセス',
+    pageCss: 'access.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="access-section" id="main-inner">
+            <h2 class="title" id="subtitle">アクセス</h2>
+            <div class="access-container">
+                <div class="access-info">
+                    <dl class="info-list">
+                        <div class="info-row">
+                            <dt>会場</dt>
+                            <dd>大倉山公園 噴水広場</dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>住所</dt>
+                            <dd>〒650-0017 兵庫県神戸市中央区楠町4丁目</dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>開催日</dt>
+                            <dd>2026年11月1日(日)</dd>
+                        </div>
+                        <div class="info-row">
+                            <dt>時間</dt>
+                            <dd>9:00 〜 18:00</dd>
+                        </div>
+                    </dl>
+
+                    <div class="traffic-guide">
+                        <h3 class="traffic-title">交通のご案内</h3>
+
+                        <div class="traffic-block">
+                            <p class="traffic-subtitle">電車をご利用の場合</p>
+                            <ul class="traffic-list">
+                                <li>神戸市営地下鉄 西神・山手線「大倉山駅」より徒歩約1分</li>
+                                <li>阪神・阪急・山陽「高速神戸駅」より徒歩約8分</li>
+                                <li>JR神戸線「神戸駅」より徒歩約12分</li>
+                                <li>神戸市営地下鉄 海岸線「ハーバーランド駅」より徒歩約12分</li>
+                            </ul>
+                        </div>
+
+                        <div class="traffic-block">
+                            <p class="traffic-subtitle">バスをご利用の場合</p>
+                            <ul class="traffic-list">
+                                <li>神戸市バス（9・110・112系統）「大学病院前」または「大倉山」停留所 下車すぐ</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="access-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d733.4246391239021!2d135.17252148668354!3d34.684471587239194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008fa0d791a085%3A0x43893fe23740b8c0!2z5rC044Go44Gf44KP44KA44KM44KL5a2Q5L6b6YGU!5e1!3m2!1sja!2sjp!4v1792828919965!5m2!1sja!2sjp"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+main {
+    .timetable {
+        .content {
+
+            .timetable-table {
+                width: 80%;
+                margin: 0 auto;
+                border-collapse: collapse;
+                border: 1px solid #ccc;
+
+                .timetable-head {
+                    background-color: #c4b13d;
+                    color: white;
+
+                    th {
+                        padding: 16px;
+                    }
+                }
+
+                .timetable-body {
+                    background-color: rgb(255, 249, 233);
+                    color: black;
+
+                    td {
+                        text-align: center;
+                        border: 1px solid #ccc;
+                        padding: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

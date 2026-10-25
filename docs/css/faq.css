@@ -1,0 +1,79 @@
+@charset "UTF-8";
+main {
+  /* FAQ項目 */
+}
+main .faq-accordion_item {
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fffef5;
+  overflow: hidden;
+}
+main {
+  /* 質問ボタン */
+}
+main .faq-accordion_question {
+  width: 100%;
+  padding: 16px 18px;
+  border: none;
+  background: #fffef5;
+  color: #111827;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+main .faq-accordion_question-text {
+  font-size: clamp(14px, 1.1vw, 16px);
+}
+main {
+  /* 質問のQ表記 */
+}
+main .faq-accordion_question-text::before {
+  content: "Q.";
+  margin-right: 8px;
+  color: #c4b13d;
+  font-weight: 700;
+}
+main {
+  /* 開閉アイコン */
+}
+main .faq-accordion_question::after {
+  content: "＋";
+  color: #c4b13d;
+  font-weight: 700;
+}
+main {
+  /* 開いている時の開閉アイコン */
+}
+main .faq-accordion_item.is-open .faq-accordion_question::after {
+  content: "－";
+}
+main {
+  /* 回答 */
+}
+main .faq-accordion_answer {
+  display: none;
+  padding: 0 18px 18px;
+  color: #4b5563;
+  line-height: 1.8;
+  font-size: clamp(14px, 1.1vw, 16px);
+}
+main {
+  /* 回答のA表記 */
+}
+main .faq-accordion_answer::before {
+  content: "A.";
+  margin-right: 8px;
+  color: #da1616;
+  font-weight: 700;
+}
+main {
+  /* 開いている時の回答 */
+}
+main .faq-accordion_item.is-open .faq-accordion_answer {
+  display: block;
+}/*# sourceMappingURL=faq.css.map */
