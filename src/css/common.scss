@@ -25,6 +25,12 @@ img {
 }
 
 body {
+    font-family:
+        "M PLUS Rounded 1c",
+        "Hiragino Maru Gothic ProN",
+        "BIZ UDPGothic",
+        sans-serif;
+    font-weight: 400;
     margin: 0;
     color: #383e45;
     background-color: #fffff0;
@@ -43,7 +49,7 @@ $underline-color: #c4b13d;
     position: relative;
     margin: clamp(32px, 4vw, 60px) 0;
     display: inline-block;
-    font-weight: 400;
+    font-weight: 500;
 
     &::after {
         content: "";
@@ -107,12 +113,17 @@ main {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    height: 100svh;
+    height: 100lvh;
     overflow: hidden;
     pointer-events: none;
     z-index: 0;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
 
     .decor-item {
         position: absolute;
@@ -131,17 +142,15 @@ main {
 
         // item-1: カプセル薬
         &.item-1 {
-            top: 20vh;
-            top: 20svh;
-            left: 5vw;
+            top: 20%;
+            left: 8vw;
             width: $width_pcbase;
             transform: rotate(-24deg);
         }
 
         // item-2: アンプル
         &.item-2 {
-            top: 40vh;
-            top: 40svh;
+            top: 50%;
             right: 22vw;
             width: $width_pcbase;
             transform: rotate(20deg);
@@ -149,17 +158,15 @@ main {
 
         // item-3: 聴診器
         &.item-3 {
-            bottom: 10vh;
-            bottom: 10svh;
+            top: 76%;
             right: 4.5vw;
             width: $width_pcbase;
-            transform: rotate(-16deg);
+            transform: rotate(-10deg);
         }
 
         // item-4: 絆創膏
         &.item-4 {
-            top: 14vh;
-            top: 14svh;
+            top: 14%;
             right: 8vw;
             width: $width_pcbase;
             transform: rotate(34deg);
@@ -167,17 +174,15 @@ main {
 
         // item-5: 注射器
         &.item-5 {
-            bottom: 10vh;
-            bottom: 10svh;
-            left: 18vw;
+            top: 76%;
+            left: 12vw;
             width: $width_pcbase;
             transform: rotate(-20deg);
         }
 
         // item-6: 救急箱
         &.item-6 {
-            top: 28vh;
-            top: 28svh;
+            top: 40%;
             left: 36vw;
             width: $width_pcbase;
             transform: rotate(-10deg);
@@ -190,12 +195,11 @@ main {
         .decor-item {
             opacity: 0.18; // モバイル画面ではさらに控えめに
 
-            $width_mobilebase: clamp(120px, 20vw, 240px);
+            $width_mobilebase: clamp(160px, 20vw, 240px);
 
             // item-1: カプセル薬
             &.item-1 {
-                top: 12vh;
-                top: 12svh;
+                top: 12%;
                 left: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-24deg);
@@ -203,17 +207,15 @@ main {
 
             // item-2: アンプル
             &.item-2 {
-                top: 50vh;
-                top: 50svh;
-                left: 2%;
+                top: 52%;
+                left: 0%;
                 width: $width_mobilebase;
-                transform: rotate(20deg);
+                transform: rotate(-20deg);
             }
 
             // item-3: 聴診器
             &.item-3 {
-                bottom: 3vh;
-                bottom: 3svh;
+                top: 70%;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-16deg);
@@ -221,8 +223,7 @@ main {
 
             // item-4: 絆創膏
             &.item-4 {
-                top: 26vh;
-                top: 26svh;
+                top: 20%;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(34deg);
@@ -230,8 +231,7 @@ main {
 
             // item-5: 注射器
             &.item-5 {
-                bottom: 5vh;
-                bottom: 5svh;
+                top: 80%;
                 left: 3%;
                 width: $width_mobilebase;
                 transform: rotate(-20deg);
@@ -239,8 +239,7 @@ main {
 
             // item-6: 救急箱
             &.item-6 {
-                top: 36vh;
-                top: 36svh;
+                top: 40%;
                 right: 2%;
                 width: $width_mobilebase;
                 transform: rotate(-10deg);
@@ -294,7 +293,7 @@ dd {
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
-        height: 100px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;

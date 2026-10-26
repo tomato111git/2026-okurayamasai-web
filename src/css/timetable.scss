@@ -1,12 +1,46 @@
+body.modal-open {
+    overflow: hidden;
+}
+
 main {
     .timetable {
         .content {
+            .timetable-note-wrapper {
+                text-align: center;
+                width: 100%;
+                margin: 0 auto 20px;
+            }
+
+            .timetable-note {
+                text-align: center;
+                font-size: 0.9rem;
+                color: #555;
+                margin: 0 auto;
+                padding: 8px 18px;
+                background-color: #e7d97c98;
+                border-radius: 20px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                max-width: 90%;
+                line-height: 1.4;
+
+                i {
+                    color: #a39227;
+                    margin-right: 6px;
+                }
+            }
 
             .timetable-table {
-                width: 80%;
-                margin: 0 auto;
+                width: 90%;
+                max-width: 800px;
+                margin: 0 auto 40px;
                 border-collapse: collapse;
                 border: 1px solid #ccc;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                overflow: hidden;
 
                 .timetable-head {
                     background-color: #c4b13d;
@@ -14,6 +48,8 @@ main {
 
                     th {
                         padding: 16px;
+                        font-weight: bold;
+                        font-size: 1rem;
                     }
                 }
 
@@ -21,12 +57,270 @@ main {
                     background-color: rgb(255, 249, 233);
                     color: black;
 
+                    tr {
+                        border-bottom: 1px solid #e5d8b8;
+
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                    }
+
                     td {
                         text-align: center;
-                        border: 1px solid #ccc;
-                        padding: 16px;
+                        border: 1px solid #e5d8b8;
+                        padding: 14px 16px;
+                        vertical-align: middle;
+
+                        &.timetable-time {
+                            white-space: nowrap;
+                            font-weight: 600;
+                            width: 32%;
+                            color: #444;
+                        }
+
+                        &.timetable-schedule {
+                            .schedule-content {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                gap: 8px;
+                                flex-direction: column;
+                                // flex-wrap: wrap;
+
+                                .schedule-title {
+                                    font-size: 0.95rem;
+                                }
+
+                                .schedule-badge {
+                                    display: inline-flex;
+                                    align-items: center;
+                                    gap: 4px;
+                                    font-size: 0.72rem;
+                                    white-space: nowrap;
+                                    background-color: #c4b13d;
+                                    color: #ffffff;
+                                    padding: 3px 9px;
+                                    border-radius: 12px;
+                                    font-weight: normal;
+                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+                                    transition: background-color 0.2s, transform 0.15s;
+                                }
+                            }
+
+                            &.has-image {
+                                cursor: pointer;
+                                user-select: none;
+                                transition: background-color 0.2s ease;
+
+                                &:hover {
+                                    background-color: #faeec7;
+
+                                    .schedule-title {
+                                        color: #8b7911;
+                                        font-weight: bold;
+                                    }
+
+                                    .schedule-badge {
+                                        background-color: #9e8d1c;
+                                        transform: translateY(-1px);
+                                    }
+                                }
+
+                                &:active {
+                                    background-color: #f3e2a0;
+                                }
+                            }
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    main .timetable .content {
+        .timetable-note {
+            font-size: 0.8rem;
+            padding: 6px 14px;
+        }
+
+        .timetable-table {
+            width: 100%;
+
+            .timetable-head th {
+                padding: 12px 6px;
+                font-size: 0.9rem;
+            }
+
+            .timetable-body td {
+                padding: 10px 6px;
+
+                &.timetable-time {
+                    font-size: 0.85rem;
+                    width: 38%;
+                }
+
+                &.timetable-schedule {
+                    .schedule-content {
+                        gap: 6px;
+
+                        .schedule-title {
+                            font-size: 0.88rem;
+                        }
+
+                        .schedule-badge {
+                            font-size: 0.68rem;
+                            padding: 2px 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* モーダル (header/footerを含む全画面を覆うためz-index: 10000) */
+.timetable-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+
+        .timetable-modal-container {
+            transform: scale(1);
+        }
+    }
+
+    .timetable-modal-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.72);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
+    .timetable-modal-container {
+        position: relative;
+        z-index: 1;
+        max-width: min(92vw, 560px);
+        max-height: 90vh;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+        display: flex;
+        flex-direction: column;
+        transform: scale(0.92);
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .timetable-modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px;
+        background-color: #c4b13d;
+        color: #ffffff;
+
+        .timetable-modal-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .timetable-modal-close {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            transition: background-color 0.2s, transform 0.2s;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .timetable-modal-body {
+        padding: 16px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fffdf7;
+        gap: 12px;
+
+        .timetable-modal-image-wrapper {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .timetable-modal-image {
+                max-width: 100%;
+                max-height: min(65vh, 580px);
+                object-fit: contain;
+                border-radius: 8px;
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+                display: block;
+            }
+        }
+
+        .timetable-modal-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding-top: 4px;
+            width: 100%;
+
+            .nav-btn {
+                background-color: #c4b13d;
+                color: #ffffff;
+                border: none;
+                padding: 6px 14px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: bold;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                transition: background-color 0.2s, transform 0.15s;
+
+                &:hover {
+                    background-color: #9e8d1c;
+                    transform: translateY(-1px);
+                }
+            }
+
+            .nav-indicator {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: #665a12;
             }
         }
     }

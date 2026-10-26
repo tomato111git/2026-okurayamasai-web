@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/timetable.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -50,6 +53,13 @@
         <div class="timetable" id="main-inner">
             <h2 class="timetable-title" id="subtitle">タイムテーブル</h2>
             <div class="content">
+                <div class="timetable-note-wrapper">
+                    <p class="timetable-note">
+                        <!-- <i class="fa-solid fa-circle-info"></i> スケジュール名をクリックすると企画ポスターをご覧いただけます。 -->
+                        スケジュール名をクリックすると企画ポスターをご覧いただけます。
+                    </p>
+                </div>
+                
                 <table class="timetable-table">
                     <thead class="timetable-head">
                         <tr>
@@ -58,38 +68,149 @@
                         </tr>
                     </thead>
                     <tbody class="timetable-body">
-                        <tr>
-                            <td>10:00~10:15</td>
-                            <td>オープニング</td>
-                        </tr>
-                        <tr>
-                            <td>10:15~10:45</td>
-                            <td>男の娘選手権</td>
-                        </tr>
-                        <tr>
-                            <td>11:00~11:45</td>
-                            <td>看板娘</td>
-                        </tr>
-                        <tr>
-                            <td>12:00~13:00</td>
-                            <td>お笑いライブ</td>
-                        </tr>
-                        <tr>
-                            <td>13:30~14:30</td>
-                            <td>ダンスショー</td>
-                        </tr>
-                        <tr>
-                            <td>15:00~17:30</td>
-                            <td>音楽ステージ</td>
-                        </tr>
-                        <tr>
-                            <td>17:45~18:30</td>
-                            <td>ビンゴ大会</td>
-                        </tr>
-                        <tr>
-                            <td>18:30~18:45</td>
-                            <td>エンディング</td>
-                        </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">10:00~10:15</td>
+                                
+                                    <td class="timetable-schedule">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">オープニング</span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">10:15~10:45</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="男の娘選手権"
+                                        data-images="./images/timetable/femboy_contest.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">男の娘選手権</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">11:00~11:45</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="看板娘"
+                                        data-images="./images/timetable/girl_competition.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">看板娘</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">12:00~13:00</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="お笑いライブ"
+                                        data-images="./images/timetable/geinin.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">お笑いライブ</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">13:30~14:30</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="ダンスショー"
+                                        data-images="./images/timetable/dance.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">ダンスショー</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">15:00~17:30</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="音楽ステージ"
+                                        data-images="./images/timetable/classic_music.png,./images/timetable/band.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">音楽ステージ</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">17:45~18:30</td>
+                                
+                                    <td class="timetable-schedule has-image js-modal-trigger"
+                                        data-title="ビンゴ大会"
+                                        data-images="./images/timetable/bingo.png"
+                                        role="button"
+                                        tabindex="0"
+                                        aria-haspopup="dialog"
+                                        title="クリックしてポスターを見る">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">ビンゴ大会</span>
+                                            <span class="schedule-badge">
+                                                <i class="fa-regular fa-image"></i> ポスターを見る
+                                            </span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
+                            <tr>
+                                <td class="timetable-time">18:30~18:45</td>
+                                
+                                    <td class="timetable-schedule">
+                                        <div class="schedule-content">
+                                            <span class="schedule-title">エンディング</span>
+                                        </div>
+                                    </td>
+                                
+                            </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -116,7 +237,35 @@
     </div>
 </footer>
 
+    <!-- 画像モーダル (header/footerを含む画面全体を覆うためmain外に配置) -->
+    <div class="timetable-modal js-timetable-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="timetable-modal-overlay js-modal-close"></div>
+        <div class="timetable-modal-container">
+            <div class="timetable-modal-header">
+                <h3 class="timetable-modal-title js-modal-title">企画詳細</h3>
+                <button type="button" class="timetable-modal-close js-modal-close" aria-label="閉じる">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="timetable-modal-body">
+                <div class="timetable-modal-image-wrapper">
+                    <img src="" alt="" class="timetable-modal-image js-modal-image">
+                </div>
+                <div class="timetable-modal-nav js-modal-nav" style="display: none;">
+                    <button type="button" class="nav-btn prev js-nav-prev" aria-label="前のポスター">
+                        <i class="fa-solid fa-chevron-left"></i> 前へ
+                    </button>
+                    <span class="nav-indicator js-nav-indicator">1 / 2</span>
+                    <button type="button" class="nav-btn next js-nav-next" aria-label="次のポスター">
+                        次へ <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./js/index.js"></script>
+    <script src="./js/timetable.js"></script>
 </body>
 
 </html>

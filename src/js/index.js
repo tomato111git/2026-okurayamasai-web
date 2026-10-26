@@ -39,8 +39,41 @@ const initMenu = () => {
     });
 };
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMenu);
-} else {
+// アドレスバー(検索バー)開閉に伴う背景デコレーションのガタつき・ズレ防止
+const initFixedBackground = () => {
+    const bg = document.querySelector('.background-decoration');
+    if (!bg) return;
+
+    let lastWidth = window.innerWidth;
+
+    const updateHeight = () => {
+        // 現在のビューポート高さをpxで固定化（スクロール時のアドレスバー伸縮による再計算を防ぐ）
+        bg.style.height = `${window.innerHeight}px`;
+    };
+
+    updateHeight();
+
+    // 画面の向きが変わった時、または横幅が変わるサイズ変更時のみ更新
+    window.addEventListener('resize', () => {
+        if (Math.abs(window.innerWidth - lastWidth) > 10) {
+            lastWidth = window.innerWidth;
+            updateHeight();
+        }
+    });
+
+    window.addEventListener('orientationchange', () => {
+        setTimeout(updateHeight, 150);
+    });
+};
+
+const initApp = () => {
     initMenu();
+    initFixedBackground();
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
 }
+

@@ -58,9 +58,10 @@ main {
 main .faq-accordion_answer {
   display: none;
   padding: 0 18px 18px;
-  color: #4b5563;
+  color: #111827;
   line-height: 1.8;
   font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 500;
 }
 main {
   /* 回答のA表記 */
@@ -68,7 +69,7 @@ main {
 main .faq-accordion_answer::before {
   content: "A.";
   margin-right: 8px;
-  color: #da1616;
+  color: #c4b13d;
   font-weight: 700;
 }
 main {

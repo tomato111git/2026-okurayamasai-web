@@ -36,11 +36,11 @@ main .discription .about-content .text p {
   }
   .main .discription .about-content .img,
   main .discription .about-content .img {
-    width: 60%;
+    width: 55%;
   }
   .main .discription .about-content .text,
   main .discription .about-content .text {
-    width: 35%;
+    width: 40%;
   }
 }
 .main .time-place .content,
@@ -72,6 +72,13 @@ main .time-place .content .place .place-content {
 .main .time-place .content .map,
 main .time-place .content .map {
   width: 50%;
+}
+.main .time-place .content .map iframe,
+main .time-place .content .map iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  border: 0;
 }
 @media (max-width: 768px) {
   .main .time-place .content,
