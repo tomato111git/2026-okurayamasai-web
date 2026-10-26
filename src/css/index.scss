@@ -99,6 +99,7 @@
                 flex-direction: column;
                 line-height: 1.8;
                 margin: 0 0 10px 0;
+                font-weight: 400;
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -214,9 +215,12 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
             padding: 25px 0 50px 0;
+            font-weight: 600;
 
             .nav-button {
-                border: 1px solid rgb(220, 211, 182);
+                border: 4px solid #c4b13d;
+                // border: 4px solid rgb(215, 179, 20);
+                // border: 4px solid rgb(220, 211, 182);
                 border-radius: 50px;
                 aspect-ratio: 1;
                 display: flex;
@@ -224,12 +228,19 @@
                 align-items: center;
                 text-decoration: none;
                 text-align: center;
-                font-size: clamp(16px, 3vw, 24px);
+                font-size: clamp(18px, 3vw, 24px);
                 transition: background-color 0.2s ease, transform 0.2s ease;
+                flex-direction: column;
+                background-color: rgb(255, 251, 236);
+                color: #c4b13d;
 
                 &:hover {
-                    background-color: rgba(240, 240, 97, 0.2);
+                    background-color: rgb(241, 234, 214);
                     transform: translateY(-2px);
+                }
+
+                img {
+                    width: 60%;
                 }
             }
         }

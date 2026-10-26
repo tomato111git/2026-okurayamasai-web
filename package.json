@@ -7,10 +7,10 @@
   },
   "scripts": {
     "build:html": "ejs-cli -b src -o docs/ \"*.ejs\"",
-    "build:copy": "cpx \"src/**/*.{css,js,png,jpg,svg}\" docs",
+    "build:copy": "cpx \"src/**/*.{css,js,png,jpg,jpeg,svg,webp}\" docs",
     "build": "run-s build:*",
     "watch:html": "chokidar \"src/**/*.ejs\" -c \"npm run build:html\" --initial",
-    "watch:copy": "cpx \"src/**/*.{css,js,png,jpg,svg}\" docs -w",
+    "watch:copy": "cpx \"src/**/*.{css,js,png,jpg,jpeg,svg,webp}\" docs -w",
     "watch": "run-p watch:*"
   }
 }
