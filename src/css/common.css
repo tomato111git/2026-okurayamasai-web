@@ -340,7 +340,7 @@ dd {
     transform: translateY(2px);
   }
   .header .header-inner .header-logo img {
-    height: clamp(48px, 12vw, 54px);
+    height: clamp(64px, 16vw, 72px);
   }
   .header .header-inner .hamburger {
     display: block;
