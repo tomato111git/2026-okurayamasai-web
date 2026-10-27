@@ -16,17 +16,15 @@ main .timetable .content .timetable-note {
   padding: 8px 18px;
   background-color: rgba(231, 217, 124, 0.5960784314);
   border-radius: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 90%;
-  line-height: 1.4;
+  line-height: 1.5;
 }
-main .timetable .content .timetable-note i {
-  color: #a39227;
-  margin-right: 6px;
+main .timetable .content .timetable-note .timetable-note-i {
+  display: inline-block;
+  white-space: nowrap;
 }
 main .timetable .content .timetable-table {
   width: 90%;

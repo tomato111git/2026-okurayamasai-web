@@ -19,16 +19,14 @@ main {
                 padding: 8px 18px;
                 background-color: #e7d97c98;
                 border-radius: 20px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                display: inline-block;
                 width: fit-content;
                 max-width: 90%;
-                line-height: 1.4;
+                line-height: 1.5;
 
-                i {
-                    color: #a39227;
-                    margin-right: 6px;
+                .timetable-note-i {
+                    display: inline-block;
+                    white-space: nowrap;
                 }
             }
 
