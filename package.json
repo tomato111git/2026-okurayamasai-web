@@ -9,8 +9,12 @@
     "build:html": "ejs-cli -b src -o docs/ \"*.ejs\"",
     "build:copy": "cpx \"src/**/*.{css,js,png,jpg,jpeg,svg,webp}\" docs",
     "build": "run-s build:*",
-    "watch:html": "chokidar \"src/**/*.ejs\" -c \"npm run build:html\" --initial",
+    "watch:html": "chokidar \"src/**/*.{ejs,json}\" -c \"npm run build:html\" --initial",
     "watch:copy": "cpx \"src/**/*.{css,js,png,jpg,jpeg,svg,webp}\" docs -w",
     "watch": "run-p watch:*"
+  },
+  "dependencies": {
+    "pdf-img-convert": "^2.0.0",
+    "sharp": "^0.35.5"
   }
 }

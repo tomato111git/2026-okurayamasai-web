@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <%- include('components/_head', {
+    title: 'パンフレット',
+    pageCss: 'pamphlet.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="pamphlet-content" id="main-inner">
+            <h2 class="pamphlet-title" id="subtitle">パンフレット</h2>
+
+            <div class="pamphlet-slider-wrapper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <% for (let i = 1; i <= 35; i++) { %>
+                        <div class="swiper-slide">
+                            <div class="pamphlet-page">
+                                <img src="./images/pamphlet/page-<%= i %>.webp"
+                                     alt="パンフレット <%= i %>ページ"
+                                     loading="<%= i <= 2 ? 'eager' : 'lazy' %>">
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
+
+                    <!-- ページ番号 (例: 1 / 35) -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- 前後ナビゲーションボタン -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="download-btn">
+                    <a href="./images/others/pamphlet.pdf" download="pamphlet.pdf">
+                        <span>PDF版をダウンロード</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+    <!-- Swiper本体を先に読み込む -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper初期化スクリプト -->
+    <script src="./js/pamphlet-slider.js"></script>
+</body>
+
+</html>

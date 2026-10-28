@@ -16,6 +16,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +42,17 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="./about.html">大倉山祭について</a></li>
+                <li class="has-dropdown">
+                    <button type="button" class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        <span>大倉山祭について</span>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="./about.html">大倉山祭とは</a></li>
+                        <li><a href="./news.html">お知らせ一覧</a></li>
+                        <li><a href="./pamphlet.html">パンフレット</a></li>
+                    </ul>
+                </li>
                 <li><a href="./timetable.html">タイムテーブル</a></li>
                 <li><a href="./projects.html">模擬店一覧</a></li>
                 <li><a href="./access.html">アクセス</a></li>
@@ -80,7 +92,7 @@
                 <button class="faq-accordion_question" type="button">
                     <span class="faq-accordion_question-text">パンフレットはどこでもらえますか？</span>
                 </button>
-                <div class="faq-accordion_answer">本サイトのパンフレットページ(製作中)にてダウンロードするか、現地にてお配りしております。</div>
+                <div class="faq-accordion_answer">本サイトのパンフレットページにてダウンロードするか、現地にてお配りしております。</div>
             </div>
             
         </div>

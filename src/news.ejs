@@ -1,0 +1,50 @@
+<%
+const newsList = JSON.parse(include('data/news.json'));
+%>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('components/_head', {
+    title: 'お知らせ',
+    pageCss: 'news.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="news-content" id="main-inner">
+            <h2 class="news-title" id="subtitle">お知らせ一覧</h2>
+            <div class="news-list">
+                <% newsList.forEach(item => { %>
+                    <dl class="news-item">
+                        <dt><%= item.date %></dt>
+                        <dd>
+                            <% if (item.url) { %>
+                                <a href="<%= item.url %>"><%= item.text %></a>
+                            <% } else { %>
+                                <%= item.text %>
+                            <% } %>
+                        </dd>
+                    </dl>
+                <% }); %>
+            </div>
+        </div>
+
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/faq.js"></script>
+</body>
+
+</html>

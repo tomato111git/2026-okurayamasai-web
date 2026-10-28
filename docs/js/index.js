@@ -25,6 +25,13 @@ const initMenu = () => {
             overlay.classList.remove('is-active');
         }
         document.body.classList.remove('menu-open');
+
+        // スマホメニューを閉じたときにドロップダウンの状態もリセット
+        document.querySelectorAll('.has-dropdown').forEach((dropdown) => {
+            dropdown.classList.remove('is-open');
+            const toggle = dropdown.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        });
     };
 
     hamburger.addEventListener('click', toggleMenu);
@@ -36,6 +43,33 @@ const initMenu = () => {
     // メニュー内のリンクをクリックしたときにも閉じる
     menuLinks.forEach((link) => {
         link.addEventListener('click', closeMenu);
+    });
+};
+
+// ヘッダーナビゲーションのドロップダウン開閉処理（ホバー・クリック対応）
+const initDropdown = () => {
+    const dropdowns = document.querySelectorAll('.has-dropdown');
+
+    dropdowns.forEach((dropdown) => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = dropdown.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    });
+
+    // ドロップダウンの外側をクリックしたときに閉じる
+    document.addEventListener('click', (e) => {
+        dropdowns.forEach((dropdown) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('is-open');
+                const toggle = dropdown.querySelector('.dropdown-toggle');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     });
 };
 
@@ -68,6 +102,7 @@ const initFixedBackground = () => {
 
 const initApp = () => {
     initMenu();
+    initDropdown();
     initFixedBackground();
 };
 
