@@ -13,15 +13,12 @@ a {
 ul {
     list-style: none;
     padding-left: 0;
-    /* ブラウザの初期のインデント（左の余白）を消す場合 */
     margin: 0;
 }
 
 img {
     max-width: 100%;
-    /* 親要素の幅に合わせて縮小（はみ出し防止） */
     height: auto;
-    /* アスペクト比（縦横比）を保ったまま高さ自動調整 */
 }
 
 body {
@@ -127,7 +124,7 @@ main {
 
     .decor-item {
         position: absolute;
-        opacity: 0.18; // スクロール時も文字の可読性を保ち、目立ちすぎない透明度
+        opacity: 0.18;
         transition: opacity 0.3s ease;
 
         img {
@@ -193,7 +190,7 @@ main {
 @media (max-width: 768px) {
     .background-decoration {
         .decor-item {
-            opacity: 0.18; // モバイル画面ではさらに控えめに
+            opacity: 0.18;
 
             $width_mobilebase: clamp(160px, 20vw, 240px);
 
@@ -303,7 +300,6 @@ dd {
             align-items: center;
             justify-content: center;
             transform: translateY(4px);
-            /* 視覚的重心を下へ微調整して真ん中に配置 */
 
             img {
                 height: clamp(60px, 10vw, 80px);
@@ -349,7 +345,6 @@ dd {
                 }
             }
 
-            // クリック時に「×」に変形
             &.is-active {
                 span {
                     &:nth-child(1) {
@@ -429,7 +424,6 @@ dd {
                 box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
                 z-index: 100;
 
-                /* 横からスライドイン */
                 transform: translateX(100%);
                 transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
                 overflow-y: auto;

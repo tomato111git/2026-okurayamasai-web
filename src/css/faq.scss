@@ -1,6 +1,5 @@
 main {
 
-    /* FAQ項目 */
     .faq-accordion_item {
 
         margin-bottom: 12px;
@@ -11,7 +10,6 @@ main {
 
     }
 
-    /* 質問ボタン */
     .faq-accordion_question {
 
         width: 100%;
@@ -33,7 +31,6 @@ main {
         font-size: clamp(14px, 1.1vw, 16px);
     }
 
-    /* 質問のQ表記 */
     .faq-accordion_question-text::before {
 
         content: "Q.";
@@ -43,7 +40,6 @@ main {
 
     }
 
-    /* 開閉アイコン */
     .faq-accordion_question::after {
 
         content: "＋";
@@ -52,14 +48,12 @@ main {
 
     }
 
-    /* 開いている時の開閉アイコン */
     .faq-accordion_item.is-open .faq-accordion_question::after {
 
         content: "－";
 
     }
 
-    /* 回答 */
     .faq-accordion_answer {
 
         display: none;
@@ -70,7 +64,6 @@ main {
         font-weight: 500;
     }
 
-    /* 回答のA表記 */
     .faq-accordion_answer::before {
 
         content: "A.";
@@ -80,7 +73,6 @@ main {
 
     }
 
-    /* 開いている時の回答 */
     .faq-accordion_item.is-open .faq-accordion_answer {
 
         display: block;

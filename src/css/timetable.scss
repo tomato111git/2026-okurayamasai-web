@@ -136,7 +136,6 @@ main {
     }
 }
 
-/* スマホ対応 */
 @media (max-width: 600px) {
     main .timetable .content {
         .timetable-note {
@@ -179,7 +178,6 @@ main {
     }
 }
 
-/* モーダル (header/footerを含む全画面を覆うためz-index: 10000) */
 .timetable-modal {
     position: fixed;
     inset: 0;
