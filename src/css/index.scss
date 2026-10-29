@@ -40,9 +40,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: clamp(130px, 14vw, 200px);
-            white-space: nowrap;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                display: block;
+                width: clamp(180px, 18vw, 220px);
+                height: auto;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
         }
 
         .tagline {
