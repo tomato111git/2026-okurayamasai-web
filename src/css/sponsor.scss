@@ -1,0 +1,20 @@
+.main {
+    .sponsor {
+        .sponsor-subtitle {
+            font-weight: 500;
+            font-size: clamp(20px, 2vw, 24px);
+        }
+
+        .sponsor-intro {
+            font-size: clamp(16px, 1vw, 18px);
+            margin-bottom: 40px;
+        }
+
+        .sponsor-content {
+            .sponsor-text {
+                font-weight: 500;
+                font-size: clamp(20px, 2vw, 24px);
+            }
+        }
+    }
+}

@@ -22,18 +22,18 @@
             <div class="pamphlet-slider-wrapper">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <% for (let i = 1; i <= 35; i++) { %>
+                        <% for (let i = 0; i <= 35; i++) { %>
                         <div class="swiper-slide">
                             <div class="pamphlet-page">
                                 <img src="./images/pamphlet/page-<%= i %>.webp"
-                                     alt="パンフレット <%= i %>ページ"
+                                     alt="パンフレット <%= i === 0 ? '表紙' : i + 'ページ' %>"
                                      loading="<%= i <= 2 ? 'eager' : 'lazy' %>">
                             </div>
                         </div>
                         <% } %>
                     </div>
 
-                    <!-- ページ番号 (例: 1 / 35) -->
+                    <!-- ページ番号 (例: 1 / 36) -->
                     <div class="swiper-pagination"></div>
 
                     <!-- 前後ナビゲーションボタン -->
@@ -43,7 +43,8 @@
                 <div class="download-btn">
                     <a href="./images/others/pamphlet.pdf" download="pamphlet.pdf">
                         <span>PDF版をダウンロード</span>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
     </main>

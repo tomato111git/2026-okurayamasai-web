@@ -1,0 +1,40 @@
+<%
+const sponsorList = JSON.parse(include('data/sponsor.json'));
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('components/_head', {
+    title: '協賛をいただいた方々',
+    pageCss: 'sponsor.css'
+  }) %>
+</head>
+
+<body>
+    <%- include('components/_background') %>
+
+    <%- include('components/_header') %>
+
+    <div class="menu-overlay"></div>
+    <main class="main">
+        <div class="sponsor" id="main-inner">
+            <h2 class="sponsor-title" id="subtitle">ご協賛</h2>
+            <p class="sponsor-subtitle">ご協賛いただいた皆様</p>
+            <p class="sponsor-intro">大倉山祭2026では、以下に紹介する企業・団体の皆様よりご協賛いただきました。心より深く感謝申し上げます。（敬称略・五十音順）</p>
+            <div class="sponsor-content">
+                <p class="sponsor-text">企業一覧</p>
+                <% for(i = 0; i < sponsorList.length ; i++){%> 
+                <p class="sponsor-name">・<%= sponsorList[i] %></p>
+                <% } %>
+            </div>
+        </div>
+    </main>
+
+    <%- include('components/_footer') %>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
