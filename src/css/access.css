@@ -30,10 +30,22 @@ main .access-section .access-container .access-info .info-list .info-row dd {
   line-height: 1.7;
 }
 main .access-section .access-container .access-info .traffic-guide .traffic-title {
-  font-size: clamp(18px, 1.8vw, 22px);
+  font-size: clamp(28px, 3.2vw, 36px);
   font-weight: 700;
   color: #383e45;
-  margin: 0 0 16px 0;
+  margin: clamp(32px, 4vw, 60px) 0;
+  position: relative;
+  display: inline-block;
+}
+main .access-section .access-container .access-info .traffic-guide .traffic-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: #c4b13d;
+  border-radius: 2px;
 }
 main .access-section .access-container .access-info .traffic-guide .traffic-block {
   margin-bottom: 20px;
@@ -42,9 +54,9 @@ main .access-section .access-container .access-info .traffic-guide .traffic-bloc
   margin-bottom: 0;
 }
 main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-subtitle {
-  font-size: clamp(15px, 1.2vw, 17px);
+  font-size: clamp(18px, 1.8vw, 22px);
   font-weight: 700;
-  color: #ca2a2a;
+  color: #000000;
   margin: 0 0 8px 0;
 }
 main .access-section .access-container .access-info .traffic-guide .traffic-block .traffic-list {
@@ -107,4 +119,6 @@ main .access-section .access-container .access-map iframe {
   main .access-section .access-container .access-map {
     aspect-ratio: 1/1;
   }
-}/*# sourceMappingURL=access.css.map */
+}
+
+/*# sourceMappingURL=access.css.map */

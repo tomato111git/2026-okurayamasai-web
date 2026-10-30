@@ -37,10 +37,23 @@ main {
 
                 .traffic-guide {
                     .traffic-title {
-                        font-size: clamp(18px, 1.8vw, 22px);
+                        font-size: clamp(28px, 3.2vw, 36px);
                         font-weight: 700;
                         color: #383e45;
-                        margin: 0 0 16px 0;
+                        margin: clamp(32px, 4vw, 60px) 0;
+                        position: relative;
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: -6px;
+                            width: 100%;
+                            height: 3px;
+                            background-color: #c4b13d;
+                            border-radius: 2px;
+                        }
                     }
 
                     .traffic-block {
@@ -51,9 +64,9 @@ main {
                         }
 
                         .traffic-subtitle {
-                            font-size: clamp(15px, 1.2vw, 17px);
+                            font-size: clamp(18px, 1.8vw, 22px);
                             font-weight: 700;
-                            color: #ca2a2a;
+                            color: #000000;
                             margin: 0 0 8px 0;
                         }
 
