@@ -8,7 +8,9 @@
   font-weight: 500;
   font-size: clamp(20px, 2vw, 24px);
   position: relative;
-  display: inline-block;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .main .sponsor .sponsor-subtitle::after {
   content: "";

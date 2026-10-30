@@ -11,7 +11,8 @@
             font-weight: 500;
             font-size: clamp(20px, 2vw, 24px);
             position: relative;
-            display: inline-block;
+            display: block;
+            width: fit-content;
 
             &::after {
                 content: "";
